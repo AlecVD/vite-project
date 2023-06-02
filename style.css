@@ -6,3 +6,11 @@
 body,html{
   overflow-y:hidden;
 }
+.container{
+  position: absolute;
+  box-sizing: border-box;
+}
+nav{
+  position: relative;
+  color: white;
+}

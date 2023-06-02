@@ -5,11 +5,12 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 //scene
 const scene = new THREE.Scene()
+// scene.background = new THREE.Color( 0xbfe3dd );
 
 //sphere 
 const geometry = new THREE.SphereGeometry(4,64,64);
 const material = new THREE.MeshStandardMaterial({
-  color: "#00ff84",
+  color: "#3498db",
 })
 const mesh = new THREE.Mesh(geometry,material)
 scene.add(mesh)
@@ -25,7 +26,7 @@ light.position.set(0,10,10)
 scene.add(light)
 
 //render
-const canvas = document.querySelector('.webgl')
+const canvas = document.querySelector('.container')
 
 const renderer = new THREE.WebGLRenderer({canvas})
 renderer.setSize(window.innerWidth,window.innerHeight)
@@ -36,6 +37,8 @@ renderer.render(scene,camera)
 const controls = new OrbitControls(camera,canvas)
 controls.enablePan = false
 controls.enableZoom = false
+controls.autoRotate = true
+controls.autoRotateSpeed = 5.0
 
 //resize
 window.addEventListener('resize',() => {
