@@ -10,8 +10,3 @@ body,html{
   position: absolute;
   box-sizing: border-box;
 }
-nav{
-  position: relative;
-  color: white;
-  display: flex;
-}
