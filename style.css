@@ -13,4 +13,5 @@ body,html{
 nav{
   position: relative;
   color: white;
+  display: flex;
 }
